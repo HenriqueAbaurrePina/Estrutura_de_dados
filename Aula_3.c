@@ -47,6 +47,7 @@ float divisao(){
     resultado = x/y;
     return resultado;
 }
+
 float selecao(int selecionado){
     switch(selecionado){
             case 1:
@@ -67,7 +68,6 @@ float selecao(int selecionado){
                 printf("\n Digite um valor valido.\n");
         }
 }
-
 
 int main()
 {   
