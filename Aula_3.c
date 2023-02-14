@@ -77,7 +77,7 @@ int main()
         printf("Menu: \n1-Soma\n2-Subtração\n3-Multiplicação\n4-Divisão\n5-Sair\n");
         scanf("%d",&selecionado);
         resultado = selecao(selecionado);
-        if(selecionado <5){
+        if(selecionado > 0 && selecionado <5){
             printf("Resultado = %.2f\n",resultado);
         }
     }
