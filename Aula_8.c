@@ -2,7 +2,7 @@
 
 int main()
 {
-    int vetor[] = {1,2,3,4,5,7,6,8,9,10};
+    int vetor[] = {1,2,3,6,5,4,7,8,9,10};
     int i = 0;
     int num = 0;
     printf("Digite o valor que queira identificar no vetor.\n");
@@ -44,21 +44,30 @@ int main()
     }
     int maior = 0;
     int menor = 0;
-    for(int o = 0; o < 10; o ++){ 
+    for(int o = 0; o < 10;){ 
         if(vetor[o] > maior){
             maior = vetor[o];
+            o++;
         }else{
-            for(int n = 0; n < 10; n++){
-                if(vetor[o] < vetor[n]){
-                    int n2 = n + 1;
-                    menor = vetor[o];
-                    vetor[n2] = vetor[n];
-                    vetor[n] = menor;
-                }
+            if(vetor[o] == maior){
+              o++;
+            }else{          
+              for(int n = 0; n <= 10;){
+                  if(vetor[o] < vetor[n]){
+                      menor = vetor[o];
+                      vetor[o] = maior;
+                      vetor[n] = menor;
+                      break;
+                  }
+                  else{
+                      n++;
+                  }
+              }
             }
-            
         }
-        printf("%i ", vetor[o]);
     }
+    for(int o = 0; o < 10; o++){
+      printf("%i ", vetor[o]);
+    }  
     return 0;
 }
